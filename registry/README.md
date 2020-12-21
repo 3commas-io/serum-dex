@@ -1,9 +1,12 @@
 # Serum Registry
 
-For a technical introduction to how the Registry and it's role in the staking system,
+For a technical introduction to the Registry and it's role in facilitating staking,
 see [Serum Staking](../docs/staking.md).
 
 ## Developing
+
+Because, the Registry builds and composes multiple programs, `make` is used to simplify
+development.
 
 ### Build
 
@@ -11,13 +14,13 @@ see [Serum Staking](../docs/staking.md).
 make build
 ```
 
-### Unit tests
+### Run unit tests
 
 ```
 make test-unit
 ```
 
-### Integration tests
+### Run integration tests
 
 ```
 make test

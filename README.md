@@ -48,13 +48,13 @@ rustup component add rustfmt
 On Linux systems you may need to install additional dependencies. On Ubuntu,
 
 ```bash
-sudo apt-get install -y pkg-config build-essential python3-pip jq
+sudo apt-get install -y pkg-config build-essential python3-pip jq libssl-dev libudev-dev zlib1g-dev llvm clang
 ```
 
 ### Install Solana
 
 ```bash
-curl -sSf https://raw.githubusercontent.com/solana-labs/solana/v1.3.9/install/solana-install-init.sh | sh -s - v1.3.9
+curl -sSf https://raw.githubusercontent.com/solana-labs/solana/v1.4.14/install/solana-install-init.sh | sh -s - v1.4.14
 export PATH="/home/ubuntu/.local/share/solana/install/active_release/bin:$PATH"
 ```
 
@@ -69,6 +69,10 @@ git clone https://github.com/project-serum/serum-dex.git
 ```bash
 ./do.sh update
 ```
+
+### Build, deploy, and test programs
+
+See individual crates for documentation. For example, to build the dex see its [README.md](https://github.com/project-serum/serum-dex/tree/armani/readme/dex).
 
 ## Running a local Solana cluster
 

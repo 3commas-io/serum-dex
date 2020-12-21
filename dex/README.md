@@ -2,7 +2,7 @@
 
 ## Deploying the DEX
 
-Find the `do.sh` script in the repository's top level directory.
+Using the `do.sh` script from the repository's top level directory,
 
 ### Run unit tests
 
