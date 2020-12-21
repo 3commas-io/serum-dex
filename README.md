@@ -28,9 +28,9 @@
 
 ## Contributing
 
-### Installing Rust
+### Install Rust
 
-```
+```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
 rustup component add rustfmt
@@ -42,60 +42,69 @@ On Linux systems you may need to install additional dependencies. On Ubuntu,
 sudo apt-get install -y pkg-config build-essential python3-pip jq
 ```
 
-### Installing Solana
+### Install Solana
 
-```
+```bash
 curl -sSf https://raw.githubusercontent.com/solana-labs/solana/v1.3.9/install/solana-install-init.sh | sh -s - v1.3.9
 export PATH="/home/ubuntu/.local/share/solana/install/active_release/bin:$PATH"
 ```
 
-### Downloading the source
+### Download the source
 
-```
+```bash
 git clone https://github.com/project-serum/serum-dex.git
 ```
 
-### Install Rust BPF SDK
+### Install the BPF SDK
 
-```
+```bash
 ./do.sh update
 ```
 
-## Running a Local Solana Cluster
+## Running a local Solana cluster
 
-### Install from NPM
+The easiest way to run a local cluster is to run a docker container provided by Solana.
+Instructions can be found [here](https://solana-labs.github.io/solana-web3.js/).
 
-The easiest way to run a local cluster is to install from NPM and pull the latest docker image.
+For local development, however, it's often convenient to build and run a validator from [source](https://github.com/solana-labs/solana).
 
-```
-npm install -g @solana/web3.js
-npx solana-localnet update
-```
+### Download the source
 
-#### Run the localnet
-
-```
-npx solana-localnet up
-```
-
-#### Shut down the localnet
-
-```
-npx solana-localnet down
-```
-
-#### Downloading the source
-
-```
+```bash
 git clone https://github.com/solana-labs/solana --branch v1.4.14
 cd solana
+```
+
+### Install system dependencies
+
+On Ubuntu,
+
+```bash
 sudo apt-get install -y libssl-dev libudev-dev zlib1g-dev llvm clang
+```
+
+### Build the validator
+
+```bash
 cargo build --release
+```
+
+### Run the local cluster
+
+```bash
 export RUST_LOG=solana_runtime::system_instruction_processor=trace,solana_runtime::message_processor=info,solana_bpf_loader=debug,solana_rbpf=debug
 NDEBUG=1 ./run.sh
+```
 
-# Deploy the dex to our cluster (in the old shell)
+### Configure the CLI
+
+```bash
 solana config set -u http://127.0.0.1:8899
+```
+
+### Create and fund your wallet
+
+```bash
 solana-keygen new
 solana airdrop 100
 ```
