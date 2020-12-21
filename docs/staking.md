@@ -9,7 +9,7 @@ providing two features: a gateway to the staking pool and a repository for node 
 
 As a gateway to the staking pool, the **Registry** controls who and when stakers can enter
 and exit the pool. This enables controls like a mandatory 1 MSRM node deposit before entering
-the pool, the staking of *locked* SRM, and a 1 week timelock for withdrawals. As a repository for
+the pool, the staking of *locked* SRM, and a 1 week timelock for withdrawals. As a repository for 
 node state, the **Registry** allows other programs to
 perform access control on staked accounts. This is useful for programs building on-top of the
 registry. For example, a **crank-rewards** program could use Registry accounts to determine if
@@ -147,7 +147,7 @@ This allows us to provide a way of dropping rewards to the stake pool in a way t
 on chain and verifiable. Of course, it requires an external trigger, some account willing to
 transfer funds to a new **RewardVendor**, but that is outside of the scope of the **Registry**
 program. The reward dropper can be an off chain BFT committee, or it can be an on-chain multisig. It can be a charitable individual,
-or funds can flow directly from the DEX, which itself creates a Reward Vendor from fees collected.
+or funds can flow directly from the DEX, which itself creates a Reward Vendor from fees collected. 
 It doesn't matter to the **Registry** program.
 
 Note that this solution also allows for rewards to be denominated in any token, not just SRM.
@@ -184,21 +184,21 @@ its state.
 
 This document describes 4 vault types belonging to **Member** accounts, making up a single set of balances. However,
 there are two stake pools: one for SRM holders and one for MSRM holders, so really there are 8 vault types.
-Additionally there are two types of balance groups: locked and unlocked.
-As a result, there are really 16 vaults for each **Member**, 8 types of vaults in 2 separate sets,
-each isolated from the other, so that locked tokens don't get intermingled with unlocked tokens.
+Additionally there are two types of balance groups: locked and unlocked. 
+As a result, there are really 16 vaults for each **Member**, 8 types of vaults in 2 separate sets, 
+each isolated from the other, so that locked tokens don't get intermingled with unlocked tokens. 
 
-But if we're staking locked tokens, we need to ensure we don't accidently unlock tokens.
-To maintain the **Lockup** program's invariant, we need a mechanism for safely entering and exiting
-the system; that is, locked tokens should only be sent back to the lockup program.
+But if we're staking locked tokens, we need to ensure we don't accidently unlock tokens. 
+To maintain the **Lockup** program's invariant, we need a mechanism for safely entering and exiting 
+the system; that is, locked tokens should only be sent back to the lockup program. 
 
-As a result, we assign each set of balances, locked and unlocked, it's own unique identifier.
-For the unlocked set of accounts the  identifier is the **Member** account's beneficiary
+As a result, we assign each set of balances, locked and unlocked, it's own unique identifier. 
+For the unlocked set of accounts the  identifier is the **Member** account's beneficiary 
 (i.e. the authority of the entire account), and for the locked set of accounts it's the vesting account's program
 derived address, controlled by the lockup program. Upon depositing or withdrawing from the **Registry**,
-the program ensures that tokens coming into the system are from vaults owned by the correct balance
+the program ensures that tokens coming into the system are from vaults owned by the correct balance 
 identifier. Similarly, tokens going out of the system can only go to vaults owned by the correct balance
 identifier.
 
-In future work, this setup will allow us to extend the staking program to stake arbitrary assets owned by
+In future work, this setup will allow us to extend the staking program to stake arbitrary assets owned by 
 arbitrary programs on behalf of an account owner.
