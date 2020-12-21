@@ -64,9 +64,7 @@ git clone https://github.com/project-serum/serum-dex.git
 ## Running a local Solana cluster
 
 The easiest way to run a local cluster is to run a docker container provided by Solana.
-Instructions can be found [here](https://solana-labs.github.io/solana-web3.js/).
-
-For local development, however, it's often convenient to build and run a validator from [source](https://github.com/solana-labs/solana).
+Instructions can be found [here](https://solana-labs.github.io/solana-web3.js/). For local development, however, it's often convenient to build and run a validator from [source](https://github.com/solana-labs/solana).
 
 ### Download the source
 
@@ -75,9 +73,7 @@ git clone https://github.com/solana-labs/solana --branch v1.4.14
 cd solana
 ```
 
-### Install system dependencies
-
-On Ubuntu,
+### Install dependencies
 
 ```bash
 sudo apt-get install -y libssl-dev libudev-dev zlib1g-dev llvm clang
