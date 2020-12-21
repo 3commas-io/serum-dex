@@ -9,7 +9,7 @@
 # It's expected this is included in child Makefiles with commands overriden as
 # desired (this is why all the targets here end with % wildcards). In addition
 # to override targets, one can customize the behavior, by override following
-# variables in a child Makefile. See `lockup/Makefile` for an example of
+# variables in a child Makefile. See `registry/Makefile` for an example of
 # a child.
 #
 ################################################################################
