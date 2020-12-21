@@ -1,7 +1,7 @@
 <div align="center">
   <img height="170" src="http://github.com/project-serum/awesome-serum/blob/master/logo-serum.png?raw=true" />
 
-  <h1>serum-rs</h1>
+  <h1>serum-dex</h1>
 
   <p>
     <strong>Project Serum Rust Monorepo</strong>
@@ -26,7 +26,7 @@
   </h4>
 </div>
 
-## Program Deployments on Solana
+## Program Deployments
 
 | Program | Devnet | Mainnet Beta |
 | --------|--------|------------- |
@@ -72,5 +72,5 @@ git clone https://github.com/project-serum/serum-dex.git
 
 ## Running a local Solana cluster
 
-The easiest way to run a local cluster is to run a docker container provided by Solana.
+The easiest way to run a local cluster is to run the docker container provided by Solana.
 Instructions can be found [here](https://solana-labs.github.io/solana-web3.js/). For local development, however, it's often convenient to build and run a validator from [source](https://github.com/solana-labs/solana).
