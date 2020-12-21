@@ -29,11 +29,11 @@
 ## Program Deployments on Solana
 
 | Program | Devnet | Mainnet Beta |
-| ------------------------------- |
-| DEX     | `F9b23Ph1JdBev2fULXTZLzaxVh2nYVdMVq9CTEaEZrid` | `EUqojwWA2rd19FZrzeBncJsm38Jm1hEhE3zsmX3bRc2o` |
-| Registry | `FigXetJcXogqm94qfmyKWy6U5KJAwtxSgJMjUHercVQp` | `Gw1XNGbSnx7PJcHTTuxxhWfkjjPmq29Qkv1hWbVFnrDp` |
-| Lockup | `CiNaYvdnQ42BNdbKvvAapHxiP18pvc3Vk5WuZ59ia64x` | `6GSn1woRF541HaiEWqNofYn8quzJuRBPi1nwoho8zNnh` |
-| Crank Rewards | `nwEt8jsBDCjV5vNg9c5YN9ktyak314DCwVTTuA3Swd9` | `A6owGf3tHCcj7BfJe5MHQmoLNYjTZhrGYXo4HeAvJVbP `|
+| --------|--------|------------- |
+| [DEX](/dex)     | `F9b23Ph1JdBev2fULXTZLzaxVh2nYVdMVq9CTEaEZrid` | `EUqojwWA2rd19FZrzeBncJsm38Jm1hEhE3zsmX3bRc2o` |
+| [Registry](/registry/program) | `FigXetJcXogqm94qfmyKWy6U5KJAwtxSgJMjUHercVQp` | `Gw1XNGbSnx7PJcHTTuxxhWfkjjPmq29Qkv1hWbVFnrDp` |
+| [Lockup](/lockup/program) | `CiNaYvdnQ42BNdbKvvAapHxiP18pvc3Vk5WuZ59ia64x` | `6GSn1woRF541HaiEWqNofYn8quzJuRBPi1nwoho8zNnh` |
+| [Crank Rewards](/registry/rewards/program) | `nwEt8jsBDCjV5vNg9c5YN9ktyak314DCwVTTuA3Swd9` | `A6owGf3tHCcj7BfJe5MHQmoLNYjTZhrGYXo4HeAvJVbP `|
 
 ## Contributing
 
