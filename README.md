@@ -48,7 +48,7 @@ rustup component add rustfmt
 On Linux systems you may need to install additional dependencies. On Ubuntu,
 
 ```bash
-sudo apt-get install -y pkg-config build-essential python3-pip jq libssl-dev libudev-dev zlib1g-dev llvm clang
+sudo apt-get install -y pkg-config build-essential python3-pip jq
 ```
 
 ### Install Solana
